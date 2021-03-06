@@ -1,0 +1,138 @@
+:root{
+    --fontkeren : -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu,
+    cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  
+  :root{
+    --bg : #e6e6e6;
+    --huruf : #222222;
+    --bgkontener : #ffffff;
+    --shadow : 20px 20px 60px #cacaca;
+    --bgbutton : #ffffff;
+    --hurufbutton : #333333;
+    --bg_hw : #e6ecff;
+    --huruf_hw : #3363ff;
+    --ae_hw : #dce4ff;
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-size: 80%;
+  }
+  
+  .identitas{
+    text-align: left;
+    font-family: var(--fontkeren);
+    padding-top: 15px;
+    padding-left: 30px;
+  }
+  
+  h2{
+    margin: 0px;
+    color:var(--huruf);
+  }
+  
+  .tombol{
+    position:absolute;
+    right: 2%;
+    top:2%;
+    font-family: var(--fontkeren);
+    font-size: 20px;
+  }
+  
+  .tombol button {
+    color: var(--hurufbutton);
+    background-color: var(--bgbutton);
+    padding: 10px 15px;
+    border: none;
+    font-family: var(--fontkeren);
+    margin: 0.8vh 1vh 0;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+  }
+  
+  body{
+    background-color: var(--bg);
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 6rem;
+    background-color: var(--bg);
+    font-family: var(--fontkeren);
+  }
+  @media (max-width: 60em) {
+    body {
+      padding: 3rem;
+    }
+  }
+  
+  .grid {
+    display: grid;
+    width: 114rem;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    align-items: start;
+    
+  }
+  @media (max-width: 60em) {
+    .grid {
+      grid-gap: 3rem;
+    }
+  }
+  .grid__item {
+    background-color: var(--bgkontener);
+    border-radius: 3rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .grid__item:hover {
+    transform: translateY(-0.5%);
+    box-shadow: var(--shadow);
+  }
+  
+  .card__img {
+    display: block;
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+  }
+  .card__content {
+    padding: 3rem 3rem;
+  }
+  .card__header {
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--huruf);
+    margin-bottom: 1.5rem;
+  }
+  .card__text {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.7;
+    color: var(--huruf);
+    margin-bottom: 2.5rem;
+  }
+  .card__btn {
+    display: block;
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--huruf_hw);
+    background-color: var(--bg_hw);
+    border: none;
+    border-radius: 20px;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  
+  .card__btn:hover, .card__btn:active {
+    background-color: var(--ae_hw);
+  }
+  
